@@ -1,0 +1,134 @@
+/* 地球 · 太阳系 · 银河系全天候监测报告 */
+:root {
+  --bg: #0a0e17;
+  --card: #111827;
+  --border: #1e293b;
+  --text: #cbd5e1;
+  --head: #f1f5f9;
+  --accent: #3b82f6;
+  --low: #475569;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+  min-height: 100vh;
+}
+
+header {
+  padding: 3rem 2rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: var(--head);
+  font-size: 2rem;
+  letter-spacing: .02em;
+}
+
+header .meta {
+  color: var(--low);
+  margin-top: .5rem;
+  font-size: .9rem;
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--low);
+  font-size: .8rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* index cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.2rem;
+  transition: border-color .2s;
+}
+.card:hover { border-color: var(--accent); }
+.card h2 { font-size: 1.15rem; margin-bottom: .3rem; }
+.card h2 a { color: var(--head); }
+.card .meta { font-size: .8rem; color: var(--low); margin-bottom: .5rem; }
+.card .excerpt { font-size: .9rem; color: var(--text); }
+.card .file { margin-top: .5rem; font-size: .75rem; color: var(--low); }
+
+/* report detail */
+.report-body h1, .report-body h2, .report-body h3 {
+  color: var(--head);
+  margin: 1.8rem 0 .6rem;
+}
+.report-body h2:first-child { margin-top: 0; }
+.report-body h2 {
+  font-size: 1.3rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--border);
+}
+.report-body h3 { font-size: 1.05rem; }
+.report-body p { margin: .6rem 0; }
+.report-body ul, .report-body ol {
+  padding-left: 1.5rem;
+  margin: .5rem 0;
+}
+.report-body li { margin: .25rem 0; }
+.report-body code {
+  background: #1e293b;
+  padding: .15em .4em;
+  border-radius: 4px;
+  font-size: .9em;
+}
+.report-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--low);
+  margin: .8rem 0;
+}
+.report-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: .9rem;
+}
+.report-body th, .report-body td {
+  border: 1px solid var(--border);
+  padding: .5rem .7rem;
+  text-align: left;
+}
+.report-body th { background: var(--card); color: var(--head); }
+.report-body hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+.report-body strong { color: var(--head); }
+.report-body a { color: var(--accent); }
+.report-body img { max-width: 100%; border-radius: 8px; }
+
+.back {
+  font-size: .85rem;
+  margin: 1rem 0;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  header { padding: 2rem 1rem 1rem; }
+  header h1 { font-size: 1.4rem; }
+  .card { padding: 1rem 1.2rem; }
+  main { padding: 0 1rem 2rem; }
+}
